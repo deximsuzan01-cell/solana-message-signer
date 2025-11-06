@@ -1,0 +1,6 @@
+// generate-key.js
+const { Keypair } = require('@solana/web3.js');
+const keypair = Keypair.generate();
+console.log("✅ Public Key:", keypair.publicKey.toBase58());
+console.log("✅ PRIVATE_KEY for .env:");
+console.log("PRIVATE_KEY=" + JSON.stringify(Array.from(keypair.secretKey)));
